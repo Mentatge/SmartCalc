@@ -1,0 +1,102 @@
+\hypertarget{s21__stack_8c}{}\doxysection{s21\+\_\+stack.\+c File Reference}
+\label{s21__stack_8c}\index{s21\_stack.c@{s21\_stack.c}}
+{\ttfamily \#include \char`\"{}s21\+\_\+calc.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{s21__stack_8c_a15352074910187841e914a8b8f5c01e8}{push\+\_\+back}} (Node $\ast$$\ast$head, Node $\ast$new1)
+\begin{DoxyCompactList}\small\item\em Функция добавляет в стэк значение и создает на нее ссылку \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{s21__stack_8c_afed875bdc4a805204a87abd3f3dc7680}{pop}} (Node $\ast$$\ast$head)
+\begin{DoxyCompactList}\small\item\em Удаляет с верху стэка ноду (строку) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{s21__stack_8c_a5bd891589868acdff61576abd98bc0b2}{clear\+\_\+node}} (Node $\ast$$\ast$head)
+\begin{DoxyCompactList}\small\item\em очистка памяти из ноды (список) \end{DoxyCompactList}\item 
+Node $\ast$ \mbox{\hyperlink{s21__stack_8c_a4ddc28d4580176c6f9e688ca97d14d69}{creat\+\_\+noda}} (double number, int codeof\+Value, int priority)
+\begin{DoxyCompactList}\small\item\em создание ноды (список) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{s21__stack_8c_a5bd891589868acdff61576abd98bc0b2}\label{s21__stack_8c_a5bd891589868acdff61576abd98bc0b2}} 
+\index{s21\_stack.c@{s21\_stack.c}!clear\_node@{clear\_node}}
+\index{clear\_node@{clear\_node}!s21\_stack.c@{s21\_stack.c}}
+\doxysubsubsection{\texorpdfstring{clear\_node()}{clear\_node()}}
+{\footnotesize\ttfamily void clear\+\_\+node (\begin{DoxyParamCaption}\item[{Node $\ast$$\ast$}]{head }\end{DoxyParamCaption})}
+
+
+
+очистка памяти из ноды (список) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & верхние значение список \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 40 of file s21\+\_\+stack.\+c.
+
+\mbox{\Hypertarget{s21__stack_8c_a4ddc28d4580176c6f9e688ca97d14d69}\label{s21__stack_8c_a4ddc28d4580176c6f9e688ca97d14d69}} 
+\index{s21\_stack.c@{s21\_stack.c}!creat\_noda@{creat\_noda}}
+\index{creat\_noda@{creat\_noda}!s21\_stack.c@{s21\_stack.c}}
+\doxysubsubsection{\texorpdfstring{creat\_noda()}{creat\_noda()}}
+{\footnotesize\ttfamily Node$\ast$ creat\+\_\+noda (\begin{DoxyParamCaption}\item[{double}]{number,  }\item[{int}]{codeof\+Value,  }\item[{int}]{priority }\end{DoxyParamCaption})}
+
+
+
+создание ноды (список) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & число которое необходимо записать в ноду \\
+\hline
+{\em codeof\+Value} & код того что поступает через энам в главном файле \\
+\hline
+{\em priority} & приоритет того что поступает \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Node$\ast$ возвращает ноду (строку) 
+\end{DoxyReturn}
+
+
+Definition at line 58 of file s21\+\_\+stack.\+c.
+
+\mbox{\Hypertarget{s21__stack_8c_afed875bdc4a805204a87abd3f3dc7680}\label{s21__stack_8c_afed875bdc4a805204a87abd3f3dc7680}} 
+\index{s21\_stack.c@{s21\_stack.c}!pop@{pop}}
+\index{pop@{pop}!s21\_stack.c@{s21\_stack.c}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily void pop (\begin{DoxyParamCaption}\item[{Node $\ast$$\ast$}]{head }\end{DoxyParamCaption})}
+
+
+
+Удаляет с верху стэка ноду (строку) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & верхние значение стэка \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 25 of file s21\+\_\+stack.\+c.
+
+\mbox{\Hypertarget{s21__stack_8c_a15352074910187841e914a8b8f5c01e8}\label{s21__stack_8c_a15352074910187841e914a8b8f5c01e8}} 
+\index{s21\_stack.c@{s21\_stack.c}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!s21\_stack.c@{s21\_stack.c}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily void push\+\_\+back (\begin{DoxyParamCaption}\item[{Node $\ast$$\ast$}]{head,  }\item[{Node $\ast$}]{new1 }\end{DoxyParamCaption})}
+
+
+
+Функция добавляет в стэк значение и создает на нее ссылку 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & главная нода (строка) \\
+\hline
+{\em new1} & новая нода (строка) от головы \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 9 of file s21\+\_\+stack.\+c.
+

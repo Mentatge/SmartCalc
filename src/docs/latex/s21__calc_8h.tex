@@ -1,0 +1,452 @@
+\hypertarget{s21__calc_8h}{}\doxysection{s21\+\_\+calc.\+h File Reference}
+\label{s21__calc_8h}\index{s21\_calc.h@{s21\_calc.h}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structNode}{Node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{s21__calc_8h_a453f07a53194584fd2e0bb720c814c25}{STACK\+\_\+\+MAX\+\_\+\+SIZE}}~256
+\item 
+\#define \mbox{\hyperlink{s21__calc_8h_a5a741f23d3fa4888f76d84f85f3107eb}{SIGN\+\_\+\+SYM}}~\char`\"{}1234567890(-\/\char`\"{}
+\item 
+\#define \mbox{\hyperlink{s21__calc_8h_ac31ec0e85c1f70d912ab94d8ea25fc31}{OPER\+\_\+\+LET}}~\char`\"{}cstal\char`\"{}
+\item 
+\#define \mbox{\hyperlink{s21__calc_8h_aaf0952059602752258dccaa015d7b54a}{NUM}}~\char`\"{}1234567890\char`\"{}
+\item 
+\#define \mbox{\hyperlink{s21__calc_8h_a8747af38b86aa2bbcda2f1b1aa0888c2}{DOUBLE}}~1
+\item 
+\#define \mbox{\hyperlink{s21__calc_8h_a87f23f9d76e3a2d5658da8dae25f38c4}{STR}}~2
+\item 
+\#define \mbox{\hyperlink{s21__calc_8h_acdfc2dfe17aba2aa98adde70ece7b9da}{GEOM}}~3
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structNode}{Node}} \mbox{\hyperlink{s21__calc_8h_a3b09f37e675bcd48a01bf22155996872}{Node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2bab}{code\+Of\+Value}} \{ \newline
+\mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2baba58833a3110c570fb05130d40c365d1e4}{X}}
+, \mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2babab83498ad0d7694203035a6e12d65cc8f}{Plus}}
+, \mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2baba54131b054736cae0dd9f4438ac44ecb0}{Minus}}
+, \mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2babae6fac012a9b23f2f87d8094e349e4418}{Div}}
+, \newline
+\mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2babad1a89d2811b2de2dd196b698721391d6}{Mul}}
+, \mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2baba54cc8639b2ae32fad159203ab1b7aa4a}{Pow}}
+, \mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2baba0d231608c3e2fd2571f9ebe74506d4eb}{Bracket\+\_\+0}}
+, \mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2baba6e9fbf285db47db859d8525172d4c092}{Bracket\+\_\+1}}
+, \newline
+\mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2baba945ca84f0cf6d5f725264a980b939a9c}{Sin}}
+, \mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2babac2dce1668fa917e2c23ef641a406044d}{Cos}}
+, \mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2babab492a96cd2b9bb37c81b8451a42889d9}{Tan}}
+, \mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2baba39e78ace5fbadbd95ed64c9cd0189176}{Atan}}
+, \newline
+\mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2baba05e01fc80da2f90f6685604e5354de95}{Ln}}
+, \mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2baba089fe3c8ed633fc44cb2e73b17af84ec}{Log}}
+, \mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2babaac7ec57a9c84861b144fb36998d78dc6}{Umin}}
+, \mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2baba98095238a325acc3b59341ba5367172d}{Sqrt}}
+, \newline
+\mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2babaa95164704516f0a1e3601aeb625e1b56}{ASin}}
+, \mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2baba694853224b77987b86c277227e3ea961}{ACos}}
+, \mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2babaae943f711ea7d1a4724ccd3a7f2c21ee}{NUMBERS}}
+, \mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2baba6546ce90be941002573cf06b712d2c6b}{MOOD}}
+, \newline
+\mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2babae252e672b7da91ea35f8397b934075f5}{Umax}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{s21__calc_8h_aefd7ab88969a2f8874bb75119f4cc8c8}{push\+\_\+back}} (\mbox{\hyperlink{structNode}{Node}} $\ast$$\ast$head, \mbox{\hyperlink{structNode}{Node}} $\ast$new)
+\begin{DoxyCompactList}\small\item\em lol \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{s21__calc_8h_afed875bdc4a805204a87abd3f3dc7680}{pop}} (\mbox{\hyperlink{structNode}{Node}} $\ast$$\ast$head)
+\begin{DoxyCompactList}\small\item\em Удаляет с верху стэка ноду (строку) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{s21__calc_8h_a5bd891589868acdff61576abd98bc0b2}{clear\+\_\+node}} (\mbox{\hyperlink{structNode}{Node}} $\ast$$\ast$head)
+\begin{DoxyCompactList}\small\item\em очистка памяти из ноды (список) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNode}{Node}} $\ast$ \mbox{\hyperlink{s21__calc_8h_a4ddc28d4580176c6f9e688ca97d14d69}{creat\+\_\+noda}} (double number, int codeof\+Value, int priority)
+\begin{DoxyCompactList}\small\item\em создание ноды (список) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{s21__calc_8h_ae3a8da9ed8637c8b2b8c2e257d299336}{string\+\_\+validation}} (char $\ast$str)
+\item 
+int \mbox{\hyperlink{s21__calc_8h_ac29bab32fc91cca6d905d1675ae7d2f0}{check\+\_\+function}} (char $\ast$str, int i)
+\item 
+char \mbox{\hyperlink{s21__calc_8h_a736972734b4cd3759c37d1f63814a5d3}{str\+\_\+to\+\_\+correct\+\_\+str}} (char $\ast$str, int i)
+\item 
+void \mbox{\hyperlink{s21__calc_8h_a2aaa1096792701cf4e4e2861562f6fab}{prepare\+\_\+str}} (char $\ast$str1, char $\ast$str2)
+\item 
+int \mbox{\hyperlink{s21__calc_8h_a261b8d52c5044b21539343b799784b16}{parser}} (\mbox{\hyperlink{structNode}{Node}} $\ast$$\ast$head\+\_\+all, char $\ast$stroka)
+\item 
+void \mbox{\hyperlink{s21__calc_8h_a309b2002a17044db1154205c5a597caa}{print\+\_\+node}} (\mbox{\hyperlink{structNode}{Node}} $\ast$head)
+\item 
+void \mbox{\hyperlink{s21__calc_8h_a6bcf83749402775134a1496f006bea88}{revese}} (\mbox{\hyperlink{structNode}{Node}} $\ast$$\ast$head, \mbox{\hyperlink{structNode}{Node}} $\ast$$\ast$tmp)
+\item 
+void \mbox{\hyperlink{s21__calc_8h_a6414e5445078fca1b65f0fc419e92c52}{polish}} (\mbox{\hyperlink{structNode}{Node}} $\ast$$\ast$head)
+\begin{DoxyCompactList}\small\item\em перевод в польскую нотацию \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{s21__calc_8h_a395aa7c37c486f655916bff9a45bef6f}{calculator}} (char $\ast$str, double $\ast$result)
+\begin{DoxyCompactList}\small\item\em калькулятор \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{s21__calc_8h_a8747af38b86aa2bbcda2f1b1aa0888c2}\label{s21__calc_8h_a8747af38b86aa2bbcda2f1b1aa0888c2}} 
+\index{s21\_calc.h@{s21\_calc.h}!DOUBLE@{DOUBLE}}
+\index{DOUBLE@{DOUBLE}!s21\_calc.h@{s21\_calc.h}}
+\doxysubsubsection{\texorpdfstring{DOUBLE}{DOUBLE}}
+{\footnotesize\ttfamily \#define DOUBLE~1}
+
+
+
+Definition at line 12 of file s21\+\_\+calc.\+h.
+
+\mbox{\Hypertarget{s21__calc_8h_acdfc2dfe17aba2aa98adde70ece7b9da}\label{s21__calc_8h_acdfc2dfe17aba2aa98adde70ece7b9da}} 
+\index{s21\_calc.h@{s21\_calc.h}!GEOM@{GEOM}}
+\index{GEOM@{GEOM}!s21\_calc.h@{s21\_calc.h}}
+\doxysubsubsection{\texorpdfstring{GEOM}{GEOM}}
+{\footnotesize\ttfamily \#define GEOM~3}
+
+
+
+Definition at line 14 of file s21\+\_\+calc.\+h.
+
+\mbox{\Hypertarget{s21__calc_8h_aaf0952059602752258dccaa015d7b54a}\label{s21__calc_8h_aaf0952059602752258dccaa015d7b54a}} 
+\index{s21\_calc.h@{s21\_calc.h}!NUM@{NUM}}
+\index{NUM@{NUM}!s21\_calc.h@{s21\_calc.h}}
+\doxysubsubsection{\texorpdfstring{NUM}{NUM}}
+{\footnotesize\ttfamily \#define NUM~\char`\"{}1234567890\char`\"{}}
+
+
+
+Definition at line 9 of file s21\+\_\+calc.\+h.
+
+\mbox{\Hypertarget{s21__calc_8h_ac31ec0e85c1f70d912ab94d8ea25fc31}\label{s21__calc_8h_ac31ec0e85c1f70d912ab94d8ea25fc31}} 
+\index{s21\_calc.h@{s21\_calc.h}!OPER\_LET@{OPER\_LET}}
+\index{OPER\_LET@{OPER\_LET}!s21\_calc.h@{s21\_calc.h}}
+\doxysubsubsection{\texorpdfstring{OPER\_LET}{OPER\_LET}}
+{\footnotesize\ttfamily \#define OPER\+\_\+\+LET~\char`\"{}cstal\char`\"{}}
+
+
+
+Definition at line 8 of file s21\+\_\+calc.\+h.
+
+\mbox{\Hypertarget{s21__calc_8h_a5a741f23d3fa4888f76d84f85f3107eb}\label{s21__calc_8h_a5a741f23d3fa4888f76d84f85f3107eb}} 
+\index{s21\_calc.h@{s21\_calc.h}!SIGN\_SYM@{SIGN\_SYM}}
+\index{SIGN\_SYM@{SIGN\_SYM}!s21\_calc.h@{s21\_calc.h}}
+\doxysubsubsection{\texorpdfstring{SIGN\_SYM}{SIGN\_SYM}}
+{\footnotesize\ttfamily \#define SIGN\+\_\+\+SYM~\char`\"{}1234567890(-\/\char`\"{}}
+
+
+
+Definition at line 7 of file s21\+\_\+calc.\+h.
+
+\mbox{\Hypertarget{s21__calc_8h_a453f07a53194584fd2e0bb720c814c25}\label{s21__calc_8h_a453f07a53194584fd2e0bb720c814c25}} 
+\index{s21\_calc.h@{s21\_calc.h}!STACK\_MAX\_SIZE@{STACK\_MAX\_SIZE}}
+\index{STACK\_MAX\_SIZE@{STACK\_MAX\_SIZE}!s21\_calc.h@{s21\_calc.h}}
+\doxysubsubsection{\texorpdfstring{STACK\_MAX\_SIZE}{STACK\_MAX\_SIZE}}
+{\footnotesize\ttfamily \#define STACK\+\_\+\+MAX\+\_\+\+SIZE~256}
+
+
+
+Definition at line 4 of file s21\+\_\+calc.\+h.
+
+\mbox{\Hypertarget{s21__calc_8h_a87f23f9d76e3a2d5658da8dae25f38c4}\label{s21__calc_8h_a87f23f9d76e3a2d5658da8dae25f38c4}} 
+\index{s21\_calc.h@{s21\_calc.h}!STR@{STR}}
+\index{STR@{STR}!s21\_calc.h@{s21\_calc.h}}
+\doxysubsubsection{\texorpdfstring{STR}{STR}}
+{\footnotesize\ttfamily \#define STR~2}
+
+
+
+Definition at line 13 of file s21\+\_\+calc.\+h.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{s21__calc_8h_a3b09f37e675bcd48a01bf22155996872}\label{s21__calc_8h_a3b09f37e675bcd48a01bf22155996872}} 
+\index{s21\_calc.h@{s21\_calc.h}!Node@{Node}}
+\index{Node@{Node}!s21\_calc.h@{s21\_calc.h}}
+\doxysubsubsection{\texorpdfstring{Node}{Node}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structNode}{Node}} \mbox{\hyperlink{structNode}{Node}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{s21__calc_8h_a91c63a982b995448dd564763945e2bab}\label{s21__calc_8h_a91c63a982b995448dd564763945e2bab}} 
+\index{s21\_calc.h@{s21\_calc.h}!codeOfValue@{codeOfValue}}
+\index{codeOfValue@{codeOfValue}!s21\_calc.h@{s21\_calc.h}}
+\doxysubsubsection{\texorpdfstring{codeOfValue}{codeOfValue}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{s21__calc_8h_a91c63a982b995448dd564763945e2bab}{code\+Of\+Value}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X@{X}!s21\_calc.h@{s21\_calc.h}}\index{s21\_calc.h@{s21\_calc.h}!X@{X}}}\mbox{\Hypertarget{s21__calc_8h_a91c63a982b995448dd564763945e2baba58833a3110c570fb05130d40c365d1e4}\label{s21__calc_8h_a91c63a982b995448dd564763945e2baba58833a3110c570fb05130d40c365d1e4}} 
+X&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Plus@{Plus}!s21\_calc.h@{s21\_calc.h}}\index{s21\_calc.h@{s21\_calc.h}!Plus@{Plus}}}\mbox{\Hypertarget{s21__calc_8h_a91c63a982b995448dd564763945e2babab83498ad0d7694203035a6e12d65cc8f}\label{s21__calc_8h_a91c63a982b995448dd564763945e2babab83498ad0d7694203035a6e12d65cc8f}} 
+Plus&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Minus@{Minus}!s21\_calc.h@{s21\_calc.h}}\index{s21\_calc.h@{s21\_calc.h}!Minus@{Minus}}}\mbox{\Hypertarget{s21__calc_8h_a91c63a982b995448dd564763945e2baba54131b054736cae0dd9f4438ac44ecb0}\label{s21__calc_8h_a91c63a982b995448dd564763945e2baba54131b054736cae0dd9f4438ac44ecb0}} 
+Minus&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Div@{Div}!s21\_calc.h@{s21\_calc.h}}\index{s21\_calc.h@{s21\_calc.h}!Div@{Div}}}\mbox{\Hypertarget{s21__calc_8h_a91c63a982b995448dd564763945e2babae6fac012a9b23f2f87d8094e349e4418}\label{s21__calc_8h_a91c63a982b995448dd564763945e2babae6fac012a9b23f2f87d8094e349e4418}} 
+Div&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Mul@{Mul}!s21\_calc.h@{s21\_calc.h}}\index{s21\_calc.h@{s21\_calc.h}!Mul@{Mul}}}\mbox{\Hypertarget{s21__calc_8h_a91c63a982b995448dd564763945e2babad1a89d2811b2de2dd196b698721391d6}\label{s21__calc_8h_a91c63a982b995448dd564763945e2babad1a89d2811b2de2dd196b698721391d6}} 
+Mul&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Pow@{Pow}!s21\_calc.h@{s21\_calc.h}}\index{s21\_calc.h@{s21\_calc.h}!Pow@{Pow}}}\mbox{\Hypertarget{s21__calc_8h_a91c63a982b995448dd564763945e2baba54cc8639b2ae32fad159203ab1b7aa4a}\label{s21__calc_8h_a91c63a982b995448dd564763945e2baba54cc8639b2ae32fad159203ab1b7aa4a}} 
+Pow&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bracket\_0@{Bracket\_0}!s21\_calc.h@{s21\_calc.h}}\index{s21\_calc.h@{s21\_calc.h}!Bracket\_0@{Bracket\_0}}}\mbox{\Hypertarget{s21__calc_8h_a91c63a982b995448dd564763945e2baba0d231608c3e2fd2571f9ebe74506d4eb}\label{s21__calc_8h_a91c63a982b995448dd564763945e2baba0d231608c3e2fd2571f9ebe74506d4eb}} 
+Bracket\+\_\+0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bracket\_1@{Bracket\_1}!s21\_calc.h@{s21\_calc.h}}\index{s21\_calc.h@{s21\_calc.h}!Bracket\_1@{Bracket\_1}}}\mbox{\Hypertarget{s21__calc_8h_a91c63a982b995448dd564763945e2baba6e9fbf285db47db859d8525172d4c092}\label{s21__calc_8h_a91c63a982b995448dd564763945e2baba6e9fbf285db47db859d8525172d4c092}} 
+Bracket\+\_\+1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sin@{Sin}!s21\_calc.h@{s21\_calc.h}}\index{s21\_calc.h@{s21\_calc.h}!Sin@{Sin}}}\mbox{\Hypertarget{s21__calc_8h_a91c63a982b995448dd564763945e2baba945ca84f0cf6d5f725264a980b939a9c}\label{s21__calc_8h_a91c63a982b995448dd564763945e2baba945ca84f0cf6d5f725264a980b939a9c}} 
+Sin&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cos@{Cos}!s21\_calc.h@{s21\_calc.h}}\index{s21\_calc.h@{s21\_calc.h}!Cos@{Cos}}}\mbox{\Hypertarget{s21__calc_8h_a91c63a982b995448dd564763945e2babac2dce1668fa917e2c23ef641a406044d}\label{s21__calc_8h_a91c63a982b995448dd564763945e2babac2dce1668fa917e2c23ef641a406044d}} 
+Cos&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Tan@{Tan}!s21\_calc.h@{s21\_calc.h}}\index{s21\_calc.h@{s21\_calc.h}!Tan@{Tan}}}\mbox{\Hypertarget{s21__calc_8h_a91c63a982b995448dd564763945e2babab492a96cd2b9bb37c81b8451a42889d9}\label{s21__calc_8h_a91c63a982b995448dd564763945e2babab492a96cd2b9bb37c81b8451a42889d9}} 
+Tan&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Atan@{Atan}!s21\_calc.h@{s21\_calc.h}}\index{s21\_calc.h@{s21\_calc.h}!Atan@{Atan}}}\mbox{\Hypertarget{s21__calc_8h_a91c63a982b995448dd564763945e2baba39e78ace5fbadbd95ed64c9cd0189176}\label{s21__calc_8h_a91c63a982b995448dd564763945e2baba39e78ace5fbadbd95ed64c9cd0189176}} 
+Atan&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ln@{Ln}!s21\_calc.h@{s21\_calc.h}}\index{s21\_calc.h@{s21\_calc.h}!Ln@{Ln}}}\mbox{\Hypertarget{s21__calc_8h_a91c63a982b995448dd564763945e2baba05e01fc80da2f90f6685604e5354de95}\label{s21__calc_8h_a91c63a982b995448dd564763945e2baba05e01fc80da2f90f6685604e5354de95}} 
+Ln&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Log@{Log}!s21\_calc.h@{s21\_calc.h}}\index{s21\_calc.h@{s21\_calc.h}!Log@{Log}}}\mbox{\Hypertarget{s21__calc_8h_a91c63a982b995448dd564763945e2baba089fe3c8ed633fc44cb2e73b17af84ec}\label{s21__calc_8h_a91c63a982b995448dd564763945e2baba089fe3c8ed633fc44cb2e73b17af84ec}} 
+Log&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Umin@{Umin}!s21\_calc.h@{s21\_calc.h}}\index{s21\_calc.h@{s21\_calc.h}!Umin@{Umin}}}\mbox{\Hypertarget{s21__calc_8h_a91c63a982b995448dd564763945e2babaac7ec57a9c84861b144fb36998d78dc6}\label{s21__calc_8h_a91c63a982b995448dd564763945e2babaac7ec57a9c84861b144fb36998d78dc6}} 
+Umin&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sqrt@{Sqrt}!s21\_calc.h@{s21\_calc.h}}\index{s21\_calc.h@{s21\_calc.h}!Sqrt@{Sqrt}}}\mbox{\Hypertarget{s21__calc_8h_a91c63a982b995448dd564763945e2baba98095238a325acc3b59341ba5367172d}\label{s21__calc_8h_a91c63a982b995448dd564763945e2baba98095238a325acc3b59341ba5367172d}} 
+Sqrt&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ASin@{ASin}!s21\_calc.h@{s21\_calc.h}}\index{s21\_calc.h@{s21\_calc.h}!ASin@{ASin}}}\mbox{\Hypertarget{s21__calc_8h_a91c63a982b995448dd564763945e2babaa95164704516f0a1e3601aeb625e1b56}\label{s21__calc_8h_a91c63a982b995448dd564763945e2babaa95164704516f0a1e3601aeb625e1b56}} 
+ASin&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ACos@{ACos}!s21\_calc.h@{s21\_calc.h}}\index{s21\_calc.h@{s21\_calc.h}!ACos@{ACos}}}\mbox{\Hypertarget{s21__calc_8h_a91c63a982b995448dd564763945e2baba694853224b77987b86c277227e3ea961}\label{s21__calc_8h_a91c63a982b995448dd564763945e2baba694853224b77987b86c277227e3ea961}} 
+ACos&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUMBERS@{NUMBERS}!s21\_calc.h@{s21\_calc.h}}\index{s21\_calc.h@{s21\_calc.h}!NUMBERS@{NUMBERS}}}\mbox{\Hypertarget{s21__calc_8h_a91c63a982b995448dd564763945e2babaae943f711ea7d1a4724ccd3a7f2c21ee}\label{s21__calc_8h_a91c63a982b995448dd564763945e2babaae943f711ea7d1a4724ccd3a7f2c21ee}} 
+NUMBERS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOOD@{MOOD}!s21\_calc.h@{s21\_calc.h}}\index{s21\_calc.h@{s21\_calc.h}!MOOD@{MOOD}}}\mbox{\Hypertarget{s21__calc_8h_a91c63a982b995448dd564763945e2baba6546ce90be941002573cf06b712d2c6b}\label{s21__calc_8h_a91c63a982b995448dd564763945e2baba6546ce90be941002573cf06b712d2c6b}} 
+MOOD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Umax@{Umax}!s21\_calc.h@{s21\_calc.h}}\index{s21\_calc.h@{s21\_calc.h}!Umax@{Umax}}}\mbox{\Hypertarget{s21__calc_8h_a91c63a982b995448dd564763945e2babae252e672b7da91ea35f8397b934075f5}\label{s21__calc_8h_a91c63a982b995448dd564763945e2babae252e672b7da91ea35f8397b934075f5}} 
+Umax&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 21 of file s21\+\_\+calc.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{s21__calc_8h_a395aa7c37c486f655916bff9a45bef6f}\label{s21__calc_8h_a395aa7c37c486f655916bff9a45bef6f}} 
+\index{s21\_calc.h@{s21\_calc.h}!calculator@{calculator}}
+\index{calculator@{calculator}!s21\_calc.h@{s21\_calc.h}}
+\doxysubsubsection{\texorpdfstring{calculator()}{calculator()}}
+{\footnotesize\ttfamily int calculator (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{double $\ast$}]{result\+\_\+new }\end{DoxyParamCaption})}
+
+
+
+калькулятор 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & строка \\
+\hline
+{\em result\+\_\+new} & результат операции \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int ошибка 
+\end{DoxyReturn}
+
+
+Definition at line 94 of file s21\+\_\+calc.\+c.
+
+\mbox{\Hypertarget{s21__calc_8h_ac29bab32fc91cca6d905d1675ae7d2f0}\label{s21__calc_8h_ac29bab32fc91cca6d905d1675ae7d2f0}} 
+\index{s21\_calc.h@{s21\_calc.h}!check\_function@{check\_function}}
+\index{check\_function@{check\_function}!s21\_calc.h@{s21\_calc.h}}
+\doxysubsubsection{\texorpdfstring{check\_function()}{check\_function()}}
+{\footnotesize\ttfamily int check\+\_\+function (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{s21__calc_8h_a5bd891589868acdff61576abd98bc0b2}\label{s21__calc_8h_a5bd891589868acdff61576abd98bc0b2}} 
+\index{s21\_calc.h@{s21\_calc.h}!clear\_node@{clear\_node}}
+\index{clear\_node@{clear\_node}!s21\_calc.h@{s21\_calc.h}}
+\doxysubsubsection{\texorpdfstring{clear\_node()}{clear\_node()}}
+{\footnotesize\ttfamily void clear\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$$\ast$}]{head }\end{DoxyParamCaption})}
+
+
+
+очистка памяти из ноды (список) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & верхние значение список \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 30 of file s21\+\_\+stack.\+c.
+
+\mbox{\Hypertarget{s21__calc_8h_a4ddc28d4580176c6f9e688ca97d14d69}\label{s21__calc_8h_a4ddc28d4580176c6f9e688ca97d14d69}} 
+\index{s21\_calc.h@{s21\_calc.h}!creat\_noda@{creat\_noda}}
+\index{creat\_noda@{creat\_noda}!s21\_calc.h@{s21\_calc.h}}
+\doxysubsubsection{\texorpdfstring{creat\_noda()}{creat\_noda()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNode}{Node}}$\ast$ creat\+\_\+noda (\begin{DoxyParamCaption}\item[{double}]{number,  }\item[{int}]{codeof\+Value,  }\item[{int}]{priority }\end{DoxyParamCaption})}
+
+
+
+создание ноды (список) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & число которое необходимо записать в ноду \\
+\hline
+{\em codeof\+Value} & код того что поступает через энам в главном файле \\
+\hline
+{\em priority} & приоритет того что поступает \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Node$\ast$ возвращает ноду (строку) 
+\end{DoxyReturn}
+
+
+Definition at line 48 of file s21\+\_\+stack.\+c.
+
+\mbox{\Hypertarget{s21__calc_8h_a261b8d52c5044b21539343b799784b16}\label{s21__calc_8h_a261b8d52c5044b21539343b799784b16}} 
+\index{s21\_calc.h@{s21\_calc.h}!parser@{parser}}
+\index{parser@{parser}!s21\_calc.h@{s21\_calc.h}}
+\doxysubsubsection{\texorpdfstring{parser()}{parser()}}
+{\footnotesize\ttfamily int parser (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$$\ast$}]{head\+\_\+all,  }\item[{char $\ast$}]{stroka }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{s21__calc_8h_a6414e5445078fca1b65f0fc419e92c52}\label{s21__calc_8h_a6414e5445078fca1b65f0fc419e92c52}} 
+\index{s21\_calc.h@{s21\_calc.h}!polish@{polish}}
+\index{polish@{polish}!s21\_calc.h@{s21\_calc.h}}
+\doxysubsubsection{\texorpdfstring{polish()}{polish()}}
+{\footnotesize\ttfamily void polish (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$$\ast$}]{head }\end{DoxyParamCaption})}
+
+
+
+перевод в польскую нотацию 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & возвращает список \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 9 of file s21\+\_\+calc.\+c.
+
+\mbox{\Hypertarget{s21__calc_8h_afed875bdc4a805204a87abd3f3dc7680}\label{s21__calc_8h_afed875bdc4a805204a87abd3f3dc7680}} 
+\index{s21\_calc.h@{s21\_calc.h}!pop@{pop}}
+\index{pop@{pop}!s21\_calc.h@{s21\_calc.h}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily void pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$$\ast$}]{head }\end{DoxyParamCaption})}
+
+
+
+Удаляет с верху стэка ноду (строку) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & верхние значение стэка \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 15 of file s21\+\_\+stack.\+c.
+
+\mbox{\Hypertarget{s21__calc_8h_a2aaa1096792701cf4e4e2861562f6fab}\label{s21__calc_8h_a2aaa1096792701cf4e4e2861562f6fab}} 
+\index{s21\_calc.h@{s21\_calc.h}!prepare\_str@{prepare\_str}}
+\index{prepare\_str@{prepare\_str}!s21\_calc.h@{s21\_calc.h}}
+\doxysubsubsection{\texorpdfstring{prepare\_str()}{prepare\_str()}}
+{\footnotesize\ttfamily void prepare\+\_\+str (\begin{DoxyParamCaption}\item[{char $\ast$}]{str1,  }\item[{char $\ast$}]{str2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{s21__calc_8h_a309b2002a17044db1154205c5a597caa}\label{s21__calc_8h_a309b2002a17044db1154205c5a597caa}} 
+\index{s21\_calc.h@{s21\_calc.h}!print\_node@{print\_node}}
+\index{print\_node@{print\_node}!s21\_calc.h@{s21\_calc.h}}
+\doxysubsubsection{\texorpdfstring{print\_node()}{print\_node()}}
+{\footnotesize\ttfamily void print\+\_\+node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$}]{head }\end{DoxyParamCaption})}
+
+
+
+Definition at line 63 of file s21\+\_\+stack.\+c.
+
+\mbox{\Hypertarget{s21__calc_8h_aefd7ab88969a2f8874bb75119f4cc8c8}\label{s21__calc_8h_aefd7ab88969a2f8874bb75119f4cc8c8}} 
+\index{s21\_calc.h@{s21\_calc.h}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!s21\_calc.h@{s21\_calc.h}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily void push\+\_\+back (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$$\ast$}]{head,  }\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$}]{new }\end{DoxyParamCaption})}
+
+
+
+lol 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & sas \\
+\hline
+{\em new} & sss \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 4 of file s21\+\_\+stack.\+c.
+
+\mbox{\Hypertarget{s21__calc_8h_a6bcf83749402775134a1496f006bea88}\label{s21__calc_8h_a6bcf83749402775134a1496f006bea88}} 
+\index{s21\_calc.h@{s21\_calc.h}!revese@{revese}}
+\index{revese@{revese}!s21\_calc.h@{s21\_calc.h}}
+\doxysubsubsection{\texorpdfstring{revese()}{revese()}}
+{\footnotesize\ttfamily void revese (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$$\ast$}]{head,  }\item[{\mbox{\hyperlink{structNode}{Node}} $\ast$$\ast$}]{tmp }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{s21__calc_8h_a736972734b4cd3759c37d1f63814a5d3}\label{s21__calc_8h_a736972734b4cd3759c37d1f63814a5d3}} 
+\index{s21\_calc.h@{s21\_calc.h}!str\_to\_correct\_str@{str\_to\_correct\_str}}
+\index{str\_to\_correct\_str@{str\_to\_correct\_str}!s21\_calc.h@{s21\_calc.h}}
+\doxysubsubsection{\texorpdfstring{str\_to\_correct\_str()}{str\_to\_correct\_str()}}
+{\footnotesize\ttfamily char str\+\_\+to\+\_\+correct\+\_\+str (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{s21__calc_8h_ae3a8da9ed8637c8b2b8c2e257d299336}\label{s21__calc_8h_ae3a8da9ed8637c8b2b8c2e257d299336}} 
+\index{s21\_calc.h@{s21\_calc.h}!string\_validation@{string\_validation}}
+\index{string\_validation@{string\_validation}!s21\_calc.h@{s21\_calc.h}}
+\doxysubsubsection{\texorpdfstring{string\_validation()}{string\_validation()}}
+{\footnotesize\ttfamily int string\+\_\+validation (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+

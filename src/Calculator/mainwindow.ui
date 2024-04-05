@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1315</width>
+    <height>628</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLineEdit" name="Expressions">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>81</y>
+      <width>721</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">Qlabel {
+	qproperty-alignment: 'AlignVCenter | AlignRight';
+	border-bottom: 1px solid gary
+}
+
+background-color : white;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>130</y>
+      <width>719</width>
+      <height>372</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="5" column="0">
+      <widget class="QPushButton" name="button_credit">
+       <property name="text">
+        <string>Кредитный калькулятор</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="5">
+      <widget class="QPushButton" name="button_asin">
+       <property name="text">
+        <string>asin</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="button_6">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid gray;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+									   stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+       </property>
+       <property name="text">
+        <string>6</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="button_scob2">
+       <property name="text">
+        <string>)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="5">
+      <widget class="QPushButton" name="button_pow">
+       <property name="text">
+        <string>^</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="4">
+      <widget class="QPushButton" name="button_ln">
+       <property name="text">
+        <string>ln</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="5">
+      <widget class="QPushButton" name="button_acos">
+       <property name="text">
+        <string>acos</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QPushButton" name="button__mul">
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="Btn_seven">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid gray;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+									   stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+       </property>
+       <property name="text">
+        <string>7</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="5">
+      <widget class="QPushButton" name="button_atan">
+       <property name="text">
+        <string>atan</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="button_9">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid gray;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+									   stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+       </property>
+       <property name="text">
+        <string>9</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QPushButton" name="Btn_zero">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid gray;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+									   stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="2" colspan="4">
+      <widget class="QPushButton" name="button_obnyl">
+       <property name="text">
+        <string>AC</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="3">
+      <widget class="QPushButton" name="button_minus">
+       <property name="text">
+        <string>-</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QPushButton" name="button_5">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid gray;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+									   stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+       </property>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QPushButton" name="Btn_toc">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid gray;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+									   stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+       </property>
+       <property name="text">
+        <string>.</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="5">
+      <widget class="QPushButton" name="button_log">
+       <property name="text">
+        <string>log</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="button_x">
+       <property name="text">
+        <string>x</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QPushButton" name="button_plus">
+       <property name="text">
+        <string>+</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QPushButton" name="button_3">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid gray;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+									   stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+       </property>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4">
+      <widget class="QPushButton" name="button_sqrt">
+       <property name="text">
+        <string>sqrt</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="button_4">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid gray;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+									   stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+       </property>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QPushButton" name="Btn_eq">
+       <property name="text">
+        <string>=</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="QPushButton" name="button_mood">
+       <property name="text">
+        <string>mod</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Калькулятор вкладов</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QPushButton" name="button_2">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid gray;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+									   stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+       </property>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="button_scob1">
+       <property name="text">
+        <string>(</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="4">
+      <widget class="QPushButton" name="button_tan">
+       <property name="text">
+        <string>tan</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="button_8">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid gray;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+									   stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+       </property>
+       <property name="text">
+        <string>8</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="QPushButton" name="button_div">
+       <property name="text">
+        <string>/</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="4">
+      <widget class="QPushButton" name="button_cos">
+       <property name="text">
+        <string>cos</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="4">
+      <widget class="QPushButton" name="button_sin">
+       <property name="text">
+        <string>sin</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="button_1">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	border: 1px solid gray;
+}
+QPushButton:pressed {
+	background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+									   stop: 0 #dadbde, stop: 1 #f6f7fa);
+}</string>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QCustomPlot" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>799</x>
+      <y>89</y>
+      <width>491</width>
+      <height>411</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>530</y>
+      <width>51</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Max x</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="MaxX">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>530</y>
+      <width>62</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-1000000.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>1000000.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>530</y>
+      <width>51</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Min x</string>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="MinX">
+    <property name="geometry">
+     <rect>
+      <x>1080</x>
+      <y>530</y>
+      <width>62</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-1000000.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>1000000.000000000000000</double>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1315</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,67 @@
+\hypertarget{s21__credit__calc_8c}{}\doxysection{s21\+\_\+credit\+\_\+calc.\+c File Reference}
+\label{s21__credit__calc_8c}\index{s21\_credit\_calc.c@{s21\_credit\_calc.c}}
+{\ttfamily \#include \char`\"{}s21\+\_\+calc.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{s21__credit__calc_8c_a67ff8c2aa611f4314d64ca00d4a4f461}{s21\+\_\+credit\+\_\+calc\+\_\+anu}} (double sum, double persent, int time, double $\ast$result)
+\begin{DoxyCompactList}\small\item\em Расчет платежу по аннуитетному методу \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{s21__credit__calc_8c_a85559ce16b53e39b92a37ae9552deb2a}{s21\+\_\+credit\+\_\+calc\+\_\+diff}} (double sum, double persent, int time, double $\ast$result, double $\ast$result2, double $\ast$result\+\_\+persent)
+\begin{DoxyCompactList}\small\item\em Расчет платежа по диффирициальному платежу \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{s21__credit__calc_8c_a67ff8c2aa611f4314d64ca00d4a4f461}\label{s21__credit__calc_8c_a67ff8c2aa611f4314d64ca00d4a4f461}} 
+\index{s21\_credit\_calc.c@{s21\_credit\_calc.c}!s21\_credit\_calc\_anu@{s21\_credit\_calc\_anu}}
+\index{s21\_credit\_calc\_anu@{s21\_credit\_calc\_anu}!s21\_credit\_calc.c@{s21\_credit\_calc.c}}
+\doxysubsubsection{\texorpdfstring{s21\_credit\_calc\_anu()}{s21\_credit\_calc\_anu()}}
+{\footnotesize\ttfamily void s21\+\_\+credit\+\_\+calc\+\_\+anu (\begin{DoxyParamCaption}\item[{double}]{sum,  }\item[{double}]{persent,  }\item[{int}]{time,  }\item[{double $\ast$}]{result }\end{DoxyParamCaption})}
+
+
+
+Расчет платежу по аннуитетному методу 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sum} & сумма \\
+\hline
+{\em persent} & процент \\
+\hline
+{\em time} & срок займа \\
+\hline
+{\em result} & ежемесячный платеж \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 16 of file s21\+\_\+credit\+\_\+calc.\+c.
+
+\mbox{\Hypertarget{s21__credit__calc_8c_a85559ce16b53e39b92a37ae9552deb2a}\label{s21__credit__calc_8c_a85559ce16b53e39b92a37ae9552deb2a}} 
+\index{s21\_credit\_calc.c@{s21\_credit\_calc.c}!s21\_credit\_calc\_diff@{s21\_credit\_calc\_diff}}
+\index{s21\_credit\_calc\_diff@{s21\_credit\_calc\_diff}!s21\_credit\_calc.c@{s21\_credit\_calc.c}}
+\doxysubsubsection{\texorpdfstring{s21\_credit\_calc\_diff()}{s21\_credit\_calc\_diff()}}
+{\footnotesize\ttfamily void s21\+\_\+credit\+\_\+calc\+\_\+diff (\begin{DoxyParamCaption}\item[{double}]{sum,  }\item[{double}]{persent,  }\item[{int}]{time,  }\item[{double $\ast$}]{result,  }\item[{double $\ast$}]{result2,  }\item[{double $\ast$}]{result\+\_\+persent }\end{DoxyParamCaption})}
+
+
+
+Расчет платежа по диффирициальному платежу 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sum} & сумма кредита \\
+\hline
+{\em persent} & проценты по кредиту \\
+\hline
+{\em time} & срок \\
+\hline
+{\em result} & максимальный разовый платеж \\
+\hline
+{\em result2} & минимальный разовый платеж \\
+\hline
+{\em result\+\_\+persent} & процент по кредиту \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file s21\+\_\+credit\+\_\+calc.\+c.
+

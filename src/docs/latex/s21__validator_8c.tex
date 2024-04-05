@@ -1,0 +1,143 @@
+\hypertarget{s21__validator_8c}{}\doxysection{s21\+\_\+validator.\+c File Reference}
+\label{s21__validator_8c}\index{s21\_validator.c@{s21\_validator.c}}
+{\ttfamily \#include \char`\"{}s21\+\_\+calc.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{s21__validator_8c_a6bcf83749402775134a1496f006bea88}{revese}} (Node $\ast$$\ast$head, Node $\ast$$\ast$tmp)
+\begin{DoxyCompactList}\small\item\em переворачивает список \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{s21__validator_8c_ae3a8da9ed8637c8b2b8c2e257d299336}{string\+\_\+validation}} (char $\ast$str)
+\begin{DoxyCompactList}\small\item\em проверка входящей строки на ошибки \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{s21__validator_8c_ac29bab32fc91cca6d905d1675ae7d2f0}{check\+\_\+function}} (char $\ast$str, int i)
+\item 
+char \mbox{\hyperlink{s21__validator_8c_a736972734b4cd3759c37d1f63814a5d3}{str\+\_\+to\+\_\+correct\+\_\+str}} (char $\ast$str, int i)
+\begin{DoxyCompactList}\small\item\em переводит строку в правильную, заменяю к cos на c и так далее для парсера \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{s21__validator_8c_a2aaa1096792701cf4e4e2861562f6fab}{prepare\+\_\+str}} (char $\ast$str1, char $\ast$str2)
+\begin{DoxyCompactList}\small\item\em подготовка строки к передачи в парсер \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{s21__validator_8c_a231967f6a406f4638c2da8fe7e9412eb}{parser}} (Node $\ast$$\ast$head\+\_\+all, char $\ast$stroka, double x)
+\begin{DoxyCompactList}\small\item\em парсер \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{s21__validator_8c_ac29bab32fc91cca6d905d1675ae7d2f0}\label{s21__validator_8c_ac29bab32fc91cca6d905d1675ae7d2f0}} 
+\index{s21\_validator.c@{s21\_validator.c}!check\_function@{check\_function}}
+\index{check\_function@{check\_function}!s21\_validator.c@{s21\_validator.c}}
+\doxysubsubsection{\texorpdfstring{check\_function()}{check\_function()}}
+{\footnotesize\ttfamily int check\+\_\+function (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Definition at line 57 of file s21\+\_\+validator.\+c.
+
+\mbox{\Hypertarget{s21__validator_8c_a231967f6a406f4638c2da8fe7e9412eb}\label{s21__validator_8c_a231967f6a406f4638c2da8fe7e9412eb}} 
+\index{s21\_validator.c@{s21\_validator.c}!parser@{parser}}
+\index{parser@{parser}!s21\_validator.c@{s21\_validator.c}}
+\doxysubsubsection{\texorpdfstring{parser()}{parser()}}
+{\footnotesize\ttfamily int parser (\begin{DoxyParamCaption}\item[{Node $\ast$$\ast$}]{head\+\_\+all,  }\item[{char $\ast$}]{stroka,  }\item[{double}]{x }\end{DoxyParamCaption})}
+
+
+
+парсер 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head\+\_\+all} & входящая список \\
+\hline
+{\em stroka} & строка из qt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int возврат ошибки 
+\end{DoxyReturn}
+
+
+Definition at line 247 of file s21\+\_\+validator.\+c.
+
+\mbox{\Hypertarget{s21__validator_8c_a2aaa1096792701cf4e4e2861562f6fab}\label{s21__validator_8c_a2aaa1096792701cf4e4e2861562f6fab}} 
+\index{s21\_validator.c@{s21\_validator.c}!prepare\_str@{prepare\_str}}
+\index{prepare\_str@{prepare\_str}!s21\_validator.c@{s21\_validator.c}}
+\doxysubsubsection{\texorpdfstring{prepare\_str()}{prepare\_str()}}
+{\footnotesize\ttfamily void prepare\+\_\+str (\begin{DoxyParamCaption}\item[{char $\ast$}]{str1,  }\item[{char $\ast$}]{str2 }\end{DoxyParamCaption})}
+
+
+
+подготовка строки к передачи в парсер 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str1} & строка входная \\
+\hline
+{\em str2} & полученная строка после подготовки \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 214 of file s21\+\_\+validator.\+c.
+
+\mbox{\Hypertarget{s21__validator_8c_a6bcf83749402775134a1496f006bea88}\label{s21__validator_8c_a6bcf83749402775134a1496f006bea88}} 
+\index{s21\_validator.c@{s21\_validator.c}!revese@{revese}}
+\index{revese@{revese}!s21\_validator.c@{s21\_validator.c}}
+\doxysubsubsection{\texorpdfstring{revese()}{revese()}}
+{\footnotesize\ttfamily void revese (\begin{DoxyParamCaption}\item[{Node $\ast$$\ast$}]{head,  }\item[{Node $\ast$$\ast$}]{tmp }\end{DoxyParamCaption})}
+
+
+
+переворачивает список 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & входной список \\
+\hline
+{\em tmp} & перевернутый список \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 8 of file s21\+\_\+validator.\+c.
+
+\mbox{\Hypertarget{s21__validator_8c_a736972734b4cd3759c37d1f63814a5d3}\label{s21__validator_8c_a736972734b4cd3759c37d1f63814a5d3}} 
+\index{s21\_validator.c@{s21\_validator.c}!str\_to\_correct\_str@{str\_to\_correct\_str}}
+\index{str\_to\_correct\_str@{str\_to\_correct\_str}!s21\_validator.c@{s21\_validator.c}}
+\doxysubsubsection{\texorpdfstring{str\_to\_correct\_str()}{str\_to\_correct\_str()}}
+{\footnotesize\ttfamily char str\+\_\+to\+\_\+correct\+\_\+str (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+переводит строку в правильную, заменяю к cos на c и так далее для парсера 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & строка \\
+\hline
+{\em i} & позиция \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char символ 
+\end{DoxyReturn}
+
+
+Definition at line 135 of file s21\+\_\+validator.\+c.
+
+\mbox{\Hypertarget{s21__validator_8c_ae3a8da9ed8637c8b2b8c2e257d299336}\label{s21__validator_8c_ae3a8da9ed8637c8b2b8c2e257d299336}} 
+\index{s21\_validator.c@{s21\_validator.c}!string\_validation@{string\_validation}}
+\index{string\_validation@{string\_validation}!s21\_validator.c@{s21\_validator.c}}
+\doxysubsubsection{\texorpdfstring{string\_validation()}{string\_validation()}}
+{\footnotesize\ttfamily int string\+\_\+validation (\begin{DoxyParamCaption}\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+проверка входящей строки на ошибки 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & строка \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int код ошибки 
+\end{DoxyReturn}
+
+
+Definition at line 22 of file s21\+\_\+validator.\+c.
+
